@@ -2,7 +2,7 @@ from flask import Blueprint, request, render_template
 from functions import write_user_data_in_json
 from loader.utils import is_filename_allowed
 
-
+#создаем блюпринт
 loader_blueprint = Blueprint('loader_blueprint', __name__, template_folder='templates')
 
 
@@ -13,7 +13,7 @@ def add_post_page():
 
 @loader_blueprint.route('/upload/post', methods=['POST'])
 def uploads_page():
-    picture = request.files.get("picture")
+    picture = request.files.get('picture')
     content = request.form.get('content')
     filename = picture.filename
 

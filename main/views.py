@@ -2,7 +2,7 @@ from flask import Blueprint, request, render_template
 from functions import get_posts_by_key
 import logging
 
-
+#создаем блюпринт
 main_blueprint = Blueprint('main_blueprint', __name__, template_folder='templates')
 
 
