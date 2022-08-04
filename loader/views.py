@@ -8,11 +8,17 @@ loader_blueprint = Blueprint('loader_blueprint', __name__, template_folder='temp
 
 @loader_blueprint.route('/upload')
 def add_post_page():
+    """
+    Страница добавления нового поста
+    """
     return render_template('post_form.html')
 
 
 @loader_blueprint.route('/upload/post', methods=['POST'])
 def uploads_page():
+    """
+    Страница нового поста после добавления
+    """
     picture = request.files.get('picture')
     content = request.form.get('content')
     filename = picture.filename
